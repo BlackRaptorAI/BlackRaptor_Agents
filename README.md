@@ -75,6 +75,24 @@ the discipline enforced by absence.
   one executing seat (growth-engine) runs behind human-in-the-loop
   approval and ethics review.
 
+## Model assignments (tiered by decision stakes)
+
+Each agent's frontmatter assigns the Claude model best suited to its seat.
+The council tiers by **decision stakes** — how expensive a subtle
+reasoning failure is, and how reversible the resulting decision — not by
+task volume:
+
+| Tier | Seats | Why |
+|---|---|---|
+| **Opus** | `council-orchestrator`, `finance`, `ethics-governance`, `fundraising-ir` | Highest judgment stakes: the orchestrator synthesizes disagreement (a subtle failure corrupts everything downstream); finance owns capital allocation and downside math; ethics-governance holds legal judgment and BLOCK authority; fundraising-ir analyzes terms where a missed nuance costs equity. |
+| **Sonnet** | `product-strategy`, `market-insight`, `pricing-strategy`, `gtm-strategy`, `revenue`, `growth-engine`, `technology-strategy`, `people-org` | Analysis and strategy seats: strong reasoning over sources and frameworks, invoked frequently, cost-efficient. |
+
+There is deliberately no cheaper volume tier: every council output is
+advice a CEO may act on, so the quality floor is uniform. Assignments are
+coaching records — if a seat under-reasons in practice, promote it (one
+line in its frontmatter). Ports should preserve the tiering with their
+vendor's equivalents (see [docs/PORTING.md](docs/PORTING.md)).
+
 ## Requirements & platforms
 
 The Council's potency comes from its mechanics (independent drafts,
