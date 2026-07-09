@@ -111,10 +111,10 @@ decide better, then go get ground truth: real customers, real dollars,
 real market signal. The agents are not lawyers, accountants, or investment
 advisors, and they will tell you when licensed professionals are required.
 
-## Companion project: governed-agents
+## Companion project: development-team-agents
 
 The Council answers *"are we building the right company?"* Its companion,
-**[governed-agents](https://github.com/BlackRaptorAI/governed-agents)**,
+**[development-team-agents](https://github.com/BlackRaptorAI/development-team-agents)**,
 answers the question downstream of it: *"are we building the thing right?"*
 — a governed AI development team (architect, engineers, security,
 compliance, QA, and blocking review gates) battle-tested on production
@@ -138,6 +138,6 @@ monitored.
 ## License
 
 Released under the Apache License 2.0 (see [LICENSE](LICENSE)) — the same
-license as our governed-agents development team. Use it, adapt it, build
+license as our development-team-agents companion. Use it, adapt it, build
 on it, commercially or not; the [NOTICE](NOTICE) attribution travels with
 every copy, port, and derivative.
