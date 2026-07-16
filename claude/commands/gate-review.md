@@ -12,6 +12,8 @@ Run gate reviews for the current branch's changes.
    - audit-trail, access-control, retention, change-mgmt → compliance-officer
    - regulated data of record → domain-compliance
    - your schema paths → data-engineer
+   - automated/AI-driven/irreversible consequential actions (remote commands,
+     auto-remediation, bulk operations) → operational-readiness
 3. Invoke each applicable gate agent as a subagent with the diff and ask for
    its Change-Record-ready verdict (PASS / CONCERNS / FAIL with analysis).
    Run independent gates in parallel.

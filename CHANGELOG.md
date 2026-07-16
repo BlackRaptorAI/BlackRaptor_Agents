@@ -3,6 +3,35 @@
 All notable changes to **development-team-agents** are recorded here.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.3.0] — 2026-07-16
+
+Roster grows to 20 with two roles extracted from the same production platform
+the kit came from, and the pods are rebalanced.
+
+### Added — agents
+- **`edge-agent-engineer`** — the on-device/customer-premises engineering tier:
+  device adapters, offline queueing, remote access, self-healing. Encodes the
+  edge disciplines cloud personas don't carry: resource budgets on constrained
+  hardware, fleet version skew (N-1/N-2 tolerance, canary channels), and clock
+  integrity when device timestamps feed regulated data. Delete it if your
+  platform has no edge tier.
+- **`operational-readiness`** — operational fitness + meaningful human control.
+  Two lenses: does the change serve the operator's real workflow (consulted at
+  spec, sign-off at delivery), and does every consequential automated or
+  AI-driven action have a designed, audited, fail-safe human checkpoint
+  (**blocking at review**). This is the kit's sixth blocking gate.
+
+### Changed
+- **Roster regrouped from 8 pods to 7.** The "Security assurance & docs"
+  catch-all is dissolved: `red-team-reviewer` joins Quality & Assurance,
+  `technical-writer` joins Communication & GTM. New agents slot into
+  Engineering and Operations.
+- Blocking-gate count is now **six** (security, privacy, compliance, domain,
+  schema, human oversight). `docs/gate-enforcement-map.md` gains the HITL row
+  (checklist-only — it's a behavioral property no path expresses).
+- `/gate-review` routes consequential automated actions to
+  `operational-readiness`; `/new-feature` consults it at spec time.
+
 ## [0.2.0] — 2026-07-03
 
 This release grew the roster and hardened the agent *craft* — most of it

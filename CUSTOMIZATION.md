@@ -55,9 +55,14 @@ Delete agents that don't apply — a smaller team steers better than an idle one
 - No regulated domain → delete `domain-compliance.md` (and its gate rows in the
   Change Record template); privacy + compliance remain
 - No marketing function → delete `product-marketing.md`
+- No edge/on-device tier → delete `edge-agent-engineer.md`
+- No consequential automated actions and no operator-facing workflows → delete
+  `operational-readiness.md` (and its gate row); think twice — if the platform
+  automates anything irreversible, this is the gate that keeps a human in the
+  loop
 
-**Adding a specialist the kit doesn't ship** (e.g. an `edge-agent-engineer` for
-an IoT/embedded tier, a `mobile-engineer`, a `data-scientist`): copy the closest
+**Adding a specialist the kit doesn't ship** (e.g. a `mobile-engineer`, a
+`data-scientist`): copy the closest
 existing agent, keep the house structure (frontmatter, reasoning-method line,
 mission, boundaries, and — if it gates — the PASS/CONCERNS/FAIL Change-Record
 paragraph), and give it a distinct reasoning method.

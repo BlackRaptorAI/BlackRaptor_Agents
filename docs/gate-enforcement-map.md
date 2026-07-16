@@ -17,6 +17,7 @@ For each review gate, record HOW it is enforced. Three honest categories:
 | Privacy — PII to LLM / cross-border | privacy-counsel | Checklist-only | — | Data-flow property |
 | Domain ({{REGULATED_DOMAIN}}) | domain-compliance | Checklist-only until the module exists | (future {{DOMAIN_PATHS}}) | Eligibility/behavioral judgments |
 | Compliance — control continuity | compliance-officer | Checklist-only | — | Behavior, not paths |
+| Human oversight — HITL on consequential automated actions | operational-readiness | Checklist-only | — | Behavioral property: designed human checkpoint, fail-safe default, audited override |
 | Quality — tests/coverage | qa-test-engineer | Mechanical | required CI checks | Test honesty (CR + review) |
 
 Two structural limits that make the Change Record mandatory, not optional:

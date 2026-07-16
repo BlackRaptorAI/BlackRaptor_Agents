@@ -1,6 +1,6 @@
 # development-team-agents
 
-**An 18-agent AI development team for Claude Code — with the governance to trust it.**
+**A 20-agent AI development team for Claude Code — with the governance to trust it.**
 
 Created by [Tom Hanks](https://tomhanks.pro) (BlackRaptor AI) ·
 Battle-tested in production · Contact: **GitHub issues and discussions only**
@@ -15,7 +15,7 @@ production and one developer runs the whole show.
 
 It is not just prompts. It's a three-layer operating model:
 
-- **Agents advise** — 18 specialist personas (architect, engineers, security,
+- **Agents advise** — 20 specialist personas (architect, engineers, security,
   privacy, compliance, QA, and more) that draft, build test-first, and review.
 - **Humans decide** — every sensitive change gets a signed **Change Record**:
   the agent's verdict is evidence, your decision is the control.
@@ -28,7 +28,7 @@ It is not just prompts. It's a three-layer operating model:
 ## What's in the box
 
 ```
-agents/            18 agent templates ({{PLACEHOLDER}}-parameterized)
+agents/            20 agent templates ({{PLACEHOLDER}}-parameterized)
 claude/            hooks (Tier-3 path guard), skills (incl. reference skills),
                    slash commands, settings
 github/            change-record-required CI workflow, CODEOWNERS + PR templates
@@ -46,19 +46,19 @@ CHANGELOG.md       what changed, and credit to the ideas we borrowed
 |---|---|
 | Orchestration | `principal-architect` (the only agent that invokes others), `security-architect` |
 | Product & Design | `product-manager`, `ux-designer` |
-| Engineering | `backend-engineer`, `frontend-engineer`, `data-engineer`, `ai-ml-engineer` |
-| Quality | `qa-test-engineer`, `code-reviewer` |
+| Engineering | `backend-engineer`, `frontend-engineer`, `data-engineer`, `ai-ml-engineer`, `edge-agent-engineer` (on-device/customer-premises tier) |
+| Quality & Assurance | `qa-test-engineer`, `code-reviewer`, `red-team-reviewer` (adversarial pre-pentest review) |
 | Compliance | `compliance-officer`, `privacy-counsel`, `domain-compliance` (your regulated domain: HIPAA, SOX, MRV, …) |
-| Operations | `devops-sre`, `security-operations` (runtime security: SIEM, WAF, IR) |
-| Go-to-Market | `product-marketing` |
-| Security assurance & docs | `red-team-reviewer` (adversarial pre-pentest review), `technical-writer` (spec/code-drift) |
+| Operations | `devops-sre`, `security-operations` (runtime security: SIEM, WAF, IR), `operational-readiness` (fit-for-operation + human-in-the-loop) |
+| Communication & GTM | `product-marketing`, `technical-writer` (spec/code-drift) |
 
-Five agents hold **blocking gates** (security, privacy, compliance, domain,
-schema). Gate agents output Change-Record-ready verdicts: PASS / CONCERNS /
-FAIL. Overruling a FAIL forces a written risk acceptance with a revisit date.
-`red-team-reviewer` is read-only by design and **complements, never replaces, a
-human penetration test**. See [CHANGELOG.md](CHANGELOG.md) for what's new in
-0.2.0 and credit to the community ideas behind it.
+Six agents hold **blocking gates** (security, privacy, compliance, domain,
+schema, human oversight of consequential automated actions). Gate agents output
+Change-Record-ready verdicts: PASS / CONCERNS / FAIL. Overruling a FAIL forces
+a written risk acceptance with a revisit date. `red-team-reviewer` is read-only
+by design and **complements, never replaces, a human penetration test**. See
+[CHANGELOG.md](CHANGELOG.md) for what's new in 0.3.0 and credit to the
+community ideas behind it.
 
 ### The rules, in one paragraph
 

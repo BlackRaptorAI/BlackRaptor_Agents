@@ -13,7 +13,9 @@ Follow the team lifecycle (your team charter):
    the questions directly and wait for answers; don't invent business facts.
 3. Consult in parallel where the feature warrants it: ux-designer (workflows),
    security-architect (early threat surface), privacy-counsel and
-   domain-compliance (regulatory constraints that shape scope).
+   domain-compliance (regulatory constraints that shape scope), and
+   operational-readiness (who operates it, the operational outcome, and any
+   human-in-the-loop checkpoints the automation needs).
 4. Draft the spec in {{SPEC_DIR}}/ format, including NFR budgets and
    failure modes, and classify the risk tier.
 5. Present the spec for my approval. Iterate until I approve — do not proceed
