@@ -3,7 +3,7 @@
 An open team of AI advisor agents that helps a CEO build the right company.
 Created by **Tom Hanks (BlackRaptor AI)**, battle-tested building Paragon
 Energy. Keep this attribution and a link to the source repository
-(https://github.com/BlackRaptorAI/business-council-agents) with any copy,
+(https://github.com/BlackRaptorAI/BlackRaptor_Agents/tree/main/council) with any copy,
 port, or derivative.
 
 The Council answers *"are we building the right company?"* — customers, what to
@@ -128,6 +128,6 @@ and must never change.
 
 Created by Tom Hanks (BlackRaptor AI); battle-tested building Paragon Energy.
 Keep this notice and a link to the source repository
-(https://github.com/BlackRaptorAI/business-council-agents) with any copy,
+(https://github.com/BlackRaptorAI/BlackRaptor_Agents/tree/main/council) with any copy,
 port, or derivative. Contributions and improvements are welcome — share them
 back so everyone builds better products and serves their customers well.

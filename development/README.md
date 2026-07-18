@@ -75,7 +75,7 @@ prompts.
 ## Quickstart
 
 ```bash
-git clone https://github.com/BlackRaptorAI/development-team-agents
+git clone https://github.com/BlackRaptorAI/BlackRaptor_Agents/tree/main/development
 cd development-team-agents
 ./install.sh /path/to/your/repo
 ```
@@ -112,7 +112,7 @@ This kit practices what it preaches, so here's its own CONCERNS verdict:
 ## Companion project: the Executive Advisory Council
 
 development-team-agents answers *"are we building the thing right?"* Its companion,
-**[business-council-agents](https://github.com/BlackRaptorAI/business-council-agents)**,
+**[BlackRaptor Agents — council](https://github.com/BlackRaptorAI/BlackRaptor_Agents/tree/main/council)**,
 answers the question upstream of it: *"are we building the right company?"* —
 twelve tough, evidence-driven advisor seats (product, market, pricing,
 finance, GTM, revenue, growth, technology & data, people, ethics & legal,

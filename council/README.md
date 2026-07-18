@@ -114,7 +114,7 @@ advisors, and they will tell you when licensed professionals are required.
 ## Companion project: development-team-agents
 
 The Council answers *"are we building the right company?"* Its companion,
-**[development-team-agents](https://github.com/BlackRaptorAI/development-team-agents)**,
+**[BlackRaptor Agents — development](https://github.com/BlackRaptorAI/BlackRaptor_Agents/tree/main/development)**,
 answers the question downstream of it: *"are we building the thing right?"*
 — a governed AI development team (architect, engineers, security,
 compliance, QA, and blocking review gates) battle-tested on production

@@ -128,7 +128,7 @@ nothing but the courage to be argued with.
 Created by **Tom Hanks (BlackRaptor AI)**, who built these agents to build
 Paragon Energy and two other companies, and is sharing them with the
 world. Keep this attribution and a link back to the source repository
-(https://github.com/BlackRaptorAI/business-council-agents) with any copy,
+(https://github.com/BlackRaptorAI/BlackRaptor_Agents/tree/main/council) with any copy,
 port, or derivative — and if you improve them, share it back so everyone
 builds better.
 
