@@ -60,6 +60,12 @@ Delete agents that don't apply — a smaller team steers better than an idle one
   `operational-readiness.md` (and its gate row); think twice — if the platform
   automates anything irreversible, this is the gate that keeps a human in the
   loop
+- No public-facing legal/policy documents to maintain → delete
+  `legal-docs-writer.md`
+- No intellectual property you actively protect → delete `ip-counsel.md`
+- `dev-orchestrator.md` is the process orchestrator that holds the `Agent`
+  tool for the team — keep it unless you orchestrate the lifecycle entirely
+  from your own session; it is the one agent that invokes the others
 
 **Adding a specialist the kit doesn't ship** (e.g. a `mobile-engineer`, a
 `data-scientist`): copy the closest
