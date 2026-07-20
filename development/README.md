@@ -1,6 +1,6 @@
 # development-team-agents
 
-**A 20-agent AI development team for Claude Code — with the governance to trust it.**
+**A 23-agent AI development team for Claude Code — with the governance to trust it.**
 
 Created by [Tom Hanks](https://tomhanks.pro) (BlackRaptor AI) ·
 Battle-tested in production · Contact: **GitHub issues and discussions only**
@@ -15,8 +15,9 @@ production and one developer runs the whole show.
 
 It is not just prompts. It's a three-layer operating model:
 
-- **Agents advise** — 20 specialist personas (architect, engineers, security,
-  privacy, compliance, QA, and more) that draft, build test-first, and review.
+- **Agents advise** — 23 specialist personas (architect, engineers, security,
+  privacy, compliance, QA, legal/IP, and more) that draft, build test-first,
+  and review, coordinated by a process-only orchestrator.
 - **Humans decide** — every sensitive change gets a signed **Change Record**:
   the agent's verdict is evidence, your decision is the control.
 - **Machines enforce** — a fail-closed path-guard hook, a CI check that blocks
@@ -28,7 +29,7 @@ It is not just prompts. It's a three-layer operating model:
 ## What's in the box
 
 ```
-agents/            20 agent templates ({{PLACEHOLDER}}-parameterized)
+agents/            23 agent templates ({{PLACEHOLDER}}-parameterized)
 claude/            hooks (Tier-3 path guard), skills (incl. reference skills),
                    slash commands, settings
 github/            change-record-required CI workflow, CODEOWNERS + PR templates
@@ -44,21 +45,64 @@ CHANGELOG.md       what changed, and credit to the ideas we borrowed
 
 | Pod | Agents |
 |---|---|
-| Orchestration | `principal-architect` (the only agent that invokes others), `security-architect` |
+| Orchestration & Architecture | `dev-orchestrator` (process-only orchestrator — the one agent that invokes others), `principal-architect` (architecture authority), `security-architect` |
 | Product & Design | `product-manager`, `ux-designer` |
 | Engineering | `backend-engineer`, `frontend-engineer`, `data-engineer`, `ai-ml-engineer`, `edge-agent-engineer` (on-device/customer-premises tier) |
 | Quality & Assurance | `qa-test-engineer`, `code-reviewer`, `red-team-reviewer` (adversarial pre-pentest review) |
 | Compliance | `compliance-officer`, `privacy-counsel`, `domain-compliance` (your regulated domain: HIPAA, SOX, MRV, …) |
 | Operations | `devops-sre`, `security-operations` (runtime security: SIEM, WAF, IR), `operational-readiness` (fit-for-operation + human-in-the-loop) |
 | Communication & GTM | `product-marketing`, `technical-writer` (spec/code-drift) |
+| Legal & IP | `legal-docs-writer` (public legal/policy docs, prepare-never-file), `ip-counsel` (patentability research, disclosure packages, trademark/copyright prep) |
 
 Six agents hold **blocking gates** (security, privacy, compliance, domain,
 schema, human oversight of consequential automated actions). Gate agents output
 Change-Record-ready verdicts: PASS / CONCERNS / FAIL. Overruling a FAIL forces
 a written risk acceptance with a revisit date. `red-team-reviewer` is read-only
 by design and **complements, never replaces, a human penetration test**. See
-[CHANGELOG.md](CHANGELOG.md) for what's new in 0.3.0 and credit to the
-community ideas behind it.
+[CHANGELOG.md](CHANGELOG.md) for what's new and credit to the community ideas
+behind it.
+
+### The orchestration model
+
+There are three orchestration roles, and only one of them is an agent file you
+invoke:
+
+- **The master orchestrator is *you* — the human's live Claude session.** It is
+  the single point of contact, the only cross-team router, and the place that
+  can invoke any specialist directly for small, scoped work (Tier 1, no gated
+  surface). It is not an agent file.
+- **`dev-orchestrator`** is a **process-only** orchestrator. It holds the
+  `Agent` tool for the dev team and runs the lifecycle of a change: it routes
+  work with full context packets, convenes collaboration working sessions,
+  enforces the challenge discipline on every claim (evidence + confidence label
+  + falsifier), reconciles each plan against the standing blocking-gates table,
+  and assembles the gate verdicts into the Change Record. It holds **no content
+  authority** — it never designs, writes code, or issues a verdict, and it
+  never overrides a specialist on substance. It is the dev-side mirror of the
+  Council's orchestrator.
+- **`principal-architect`** is the **architecture authority**, not the router.
+  It authors design specs and owns the architecture standard (features
+  incorporated rather than bolted on, integration-ready seams, secure-by-
+  architecture, outcome fidelity), and its designs are challenged and
+  gate-reviewed like any other specialist's work. (The `Agent` tool moved to
+  `dev-orchestrator`: the author of a spec no longer routes the reviews of that
+  spec — separation of duties.)
+
+**Provisional agents.** When work has no chartered owner, an orchestrator may
+commission a *provisional agent* from a written role brief for that task only:
+least-privilege tools, full challenge discipline, and **never** a gate, a
+blocking verdict, or a gated surface. Every use is reported to you with a
+recommendation — formalize as a permanent agent, run once, or fold the duty
+into an existing charter. The team grows only through your signature.
+
+**The customer-experience north star.** The whole team builds toward one
+outcome: the product does what customers need and want, it is easy to use, and
+every feature works as expected, every time. Mechanically, every spec states
+its customer outcome and every plan verifies the built feature against that
+outcome — not merely against passing tests — and `dev-orchestrator` returns
+specs and plans that arrive without it. Ease of use and security are
+co-primary, never traded off: where they seem to conflict, the fix is to make
+the secure path the easy path.
 
 ### The rules, in one paragraph
 
