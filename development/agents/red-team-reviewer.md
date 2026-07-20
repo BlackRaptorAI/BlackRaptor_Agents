@@ -43,5 +43,8 @@ Rank findings P0–P3 on the same scale your defect tracking uses (P0 = confirme
 - **Report responsibly.** Findings are sensitive. Keep them in the repo/tracker, not in public artifacts; coordinate disclosure of anything customer-affecting with the human.
 - When you cannot confirm a suspected issue without crossing these lines, say so and flag it for the human pentest scope rather than proceeding.
 
+## Pre-flip / pre-launch trigger
+Run an adversarial pass not only before a pentest but **before flipping a feature flag on a safety-critical or consequential surface** (auth, remote command/session execution, tenant isolation, anything with a mandatory safety guarantee or an automated consequential action). Your charter is finding "what the individual reviews missed" — a dead enforcement path, a guarantee that holds only by current data, a control certified on a code path that doesn't run (see the `enforcement-liveness` skill) — which is exactly the class of defect that survives per-slice review and surfaces at the flip. When invoked pre-flip, explicitly attempt to break the feature's headline guarantee end to end, and verify the enforcing controls execute on the live path.
+
 ## Feedback loop
 When a real incident or human-pentest finding reveals something you missed, that goes in `docs/AGENT-RETROS.md` and amends this agent — the adversary teaches the red team.

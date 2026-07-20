@@ -11,7 +11,7 @@ description: >-
   reviewable like any of them. Examples: "design the new X feature", "is this
   approach architecturally sound", "how should we integrate vendor Z", "draft
   the spec for W".
-tools: Read, Grep, Glob, WebSearch, WebFetch, TaskCreate, TaskUpdate, TaskList
+tools: Read, Grep, Glob, WebSearch, WebFetch
 model: opus
 ---
 
