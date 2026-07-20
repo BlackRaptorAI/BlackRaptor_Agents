@@ -91,6 +91,20 @@ Two notes:
 Adjust any of this to your own cost/quality tradeoff; the frontmatter `model:`
 field is yours to set.
 
+**Tier also sets output-quality discipline.** The model tier decides how hard
+each agent runs the **Excellence Pass** (`claude/skills/excellence-pass`, drawn
+from [`docs/agent-operating-standard.md`](docs/agent-operating-standard.md)) —
+because the quality gap between tiers concentrates in five behaviors a strong
+model does by default and a cheaper one skips unless told: enforce the hidden
+input contract, verify by an *independent* method, add the decision-changing
+second-order layer, draft (not describe) the interfaces the deliverable depends
+on, and quantify the counterfactual. Each charter carries a one-line pointer
+tuned to its tier — the top tier keeps latitude (checklist backstop); the
+everyday-build tier runs it as an explicit checklist and lists three ways the
+output could be wrong before delivering. That is how a strong model's default
+behaviors are transferred to the rest of the roster: instructions can't
+transfer capability, but they transfer the process.
+
 ### The orchestration model
 
 There are three orchestration roles, and only one of them is an agent file you
