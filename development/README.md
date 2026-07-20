@@ -62,6 +62,35 @@ by design and **complements, never replaces, a human penetration test**. See
 [CHANGELOG.md](CHANGELOG.md) for what's new and credit to the community ideas
 behind it.
 
+### Model tiering
+
+Each agent's `model:` is a deliberate policy choice, not an accident. The knob
+is **the cost of being wrong × the call volume**: pay for the strongest model
+where a mistake is expensive and the agent runs rarely; use a strong-but-cheaper
+model for high-volume execution.
+
+| Tier | Model | Agents | Why |
+|---|---|---|---|
+| Orchestration & Architecture | `opus` | `dev-orchestrator`, `principal-architect` | `dev-orchestrator` routes every change and enforces the challenge discipline — a routing miss silently skips a gate. `principal-architect` shapes every architecture-level decision — the costliest kind to get wrong. Both merit the strongest model available. |
+| Deep judgment (gates & adversarial review) | `opus` | `security-architect`, `privacy-counsel`, `compliance-officer`, `domain-compliance`, `red-team-reviewer`, `security-operations`, `code-reviewer`, `operational-readiness`, `legal-docs-writer`, `ip-counsel` | Blocking gates and adversarial passes: being wrong is expensive and call volume is low, so the premium is worth it. `code-reviewer` sits here deliberately — it is the last gate before a merge-to-prod deploy and runs once per PR, so the premium buys judgment at the single point where everything converges. |
+| Everyday build | `sonnet` | `backend-engineer`, `frontend-engineer`, `data-engineer`, `ai-ml-engineer`, `edge-agent-engineer`, `qa-test-engineer`, `devops-sre`, `ux-designer`, `product-manager`, `product-marketing`, `technical-writer` | High-volume execution from already-approved specs; strong and cost-efficient. |
+
+Two notes:
+
+- **`data-engineer` stays on `sonnet` despite holding the Tier-3 schema gate** —
+  a documented exception. Most of its calls are build work where `sonnet` is
+  the right choice, and the schema gate's residual risk is backstopped by
+  CODEOWNERS: Tier-3 schema paths require a second person's approval regardless
+  of the agent's verdict. Revisit if a schema miss ever reaches your retro log.
+- **This template tops out at `opus`** for orchestration and architecture. If
+  your deployment has access to a stronger frontier model, promote those two
+  roles to it (change their `model:` frontmatter, or pass the model at
+  invocation) — they are the two places where the extra capability pays for
+  itself first.
+
+Adjust any of this to your own cost/quality tradeoff; the frontmatter `model:`
+field is yours to set.
+
 ### The orchestration model
 
 There are three orchestration roles, and only one of them is an agent file you
