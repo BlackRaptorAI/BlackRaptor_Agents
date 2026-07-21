@@ -1,6 +1,6 @@
 # BlackRaptor Agents
 
-**A complete, governed AI organization for Claude Code: a 20-agent development
+**A complete, governed AI organization for Claude Code: a 24-agent development
 team and a 12-seat executive advisory council, designed to work as one company
 — agents advise, humans decide.**
 
@@ -12,11 +12,27 @@ This repository consolidates the former `development-team-agents` and
 `business-council-agents` repositories (both now archived, histories merged
 here) into the single home for the full group.
 
+## Install (Claude Code plugin marketplace)
+
+Add this repo as a plugin marketplace, then install either team — or both:
+
+```bash
+/plugin marketplace add BlackRaptorAI/BlackRaptor_Agents
+/plugin install blackraptor-dev-team@blackraptor-ai      # the 24-agent dev team + 8 skills
+/plugin install blackraptor-council@blackraptor-ai       # the 12-seat advisory council
+/reload-plugins
+```
+
+Installed agents and skills are namespaced (e.g. `blackraptor-dev-team:excellence-pass`)
+and available in every project. Prefer to vendor the files into a single repo
+instead? Each team also ships a classic installer — see [`development/`](development/)
+and [`council/`](council/).
+
 ## The two teams
 
 | | Team | Answers | Home |
 |---|---|---|---|
-| 🛠 | **Development team** — 20 specialist agents: architect, engineers, security, privacy, compliance, QA, ops, docs. Six hold blocking gates; every sensitive change gets a signed Change Record. | *"Are we building the thing right?"* | [`development/`](development/) |
+| 🛠 | **Development team** — 24 specialist agents: architect, engineers, security, privacy, compliance, QA, ops, docs, and gate reviewers (incl. `evidence-auditor`, the research-integrity gate). Blocking gates hold the line; every sensitive change gets a signed Change Record. | *"Are we building the thing right?"* | [`development/`](development/) |
 | 🏛 | **Executive Advisory Council** — 12 seats: product strategy, market insight, pricing, finance, GTM, revenue, growth, technology, people, ethics (with standing to block), fundraising — convened by an orchestrator whose **challenge protocol** stops unevidenced claims from ever reaching you. | *"Are we building the right company?"* | [`council/`](council/) |
 
 Each directory is self-contained — its own README, install instructions, agent

@@ -1,0 +1,14 @@
+{
+  "name": "blackraptor-council",
+  "displayName": "BlackRaptor Agents — Executive Advisory Council",
+  "version": "1.0.0",
+  "description": "A 12-seat executive advisory council convened through a challenge protocol (sourced evidence, confidence labels, counter-case, voice-of-customer, 'what you lose'). Seats: product-strategy, gtm-strategy, pricing-strategy, finance, market-insight, ethics-governance, revenue, people-org, technology-strategy, fundraising-ir, growth-engine — coordinated by the council-orchestrator.",
+  "author": {
+    "name": "BlackRaptor AI",
+    "url": "https://github.com/BlackRaptorAI"
+  },
+  "homepage": "https://github.com/BlackRaptorAI/BlackRaptor_Agents/tree/main/council",
+  "repository": "https://github.com/BlackRaptorAI/BlackRaptor_Agents",
+  "license": "Apache-2.0",
+  "keywords": ["agents", "business", "strategy", "council", "advisory"]
+}

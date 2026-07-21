@@ -1,7 +1,40 @@
 # Changelog
 
-All notable changes to **development-team-agents** are recorded here.
+All notable changes to the BlackRaptor Agents development team are recorded here.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
+
+## [1.1.0] — 2026-07-21
+
+The research-integrity release + Claude Code plugin marketplace. Roster 23 → 24.
+
+### Added — agents
+- **`evidence-auditor`** — the independent adversarial gate for research, analysis,
+  and evidence-based reporting (the research analog of `red-team-reviewer` /
+  `completion-auditor`). Read/analysis-only; grades sources (reliability ×
+  credibility), collapses citation chains to **independent origins** (effective-N /
+  anti-woozle), separates **root-veracity** from root-reachability, checks
+  qualifier drift, and enforces the release gate — PASS / CONCERNS / FAIL verdicts.
+
+### Added — skills
+- **`research-integrity`** — a three-mode research methodology engine (A evidence
+  synthesis · B direct-source aggregation · C original primary research) with an
+  intake triage, mode-selector, separate source-reliability × evidence-certainty
+  grading, citation-independence + consilience, root-to-mechanism verification, a
+  release gate, and analytic-judgment output. Ships with fillable artifact
+  templates (`templates.md`) and the full design spec (`docs/research-integrity-spec.md`).
+- **`excellence-pass`** — the five behaviors that separate top-tier output from
+  merely-correct output, run as a final pass before delivery; each charter carries
+  a tier-appropriate pointer to it.
+
+### Added — distribution
+- **Claude Code plugin marketplace.** Install the suite via
+  `/plugin marketplace add BlackRaptorAI/BlackRaptor_Agents` → plugins
+  `blackraptor-dev-team` and `blackraptor-council`. Manifests:
+  `.claude-plugin/marketplace.json` (repo root) + per-team `plugin.json`.
+
+### Changed
+- Dev roster **20 → 24** (Legal & IP pod: `legal-docs-writer` + `ip-counsel`;
+  then `evidence-auditor`). README count + install docs updated.
 
 ## [0.3.0] — 2026-07-16
 

@@ -1,0 +1,23 @@
+{
+  "name": "blackraptor-ai",
+  "owner": {
+    "name": "BlackRaptor AI",
+    "url": "https://github.com/BlackRaptorAI"
+  },
+  "description": "Governed AI agent teams for Claude Code — a full development team and a 12-seat executive advisory council, with shared skills (Excellence Pass, research-integrity, gate reviews). Install the suite, or either team.",
+  "version": "1.1.0",
+  "plugins": [
+    {
+      "name": "blackraptor-dev-team",
+      "displayName": "BlackRaptor Agents — Development Team",
+      "source": "./development",
+      "description": "23 governed dev-team agents (process orchestrator, principal architect, engineers, and blocking-gate reviewers incl. security, privacy, compliance, red-team, and the evidence-auditor research gate) + shared skills: excellence-pass, research-integrity, gate-verdict-format, enforcement-liveness, change-record, stride-review, owasp-llm-checklist, expand-contract-migration."
+    },
+    {
+      "name": "blackraptor-council",
+      "displayName": "BlackRaptor Agents — Executive Advisory Council",
+      "source": "./council",
+      "description": "A 12-seat executive advisory council convened through a challenge protocol — product-strategy, gtm-strategy, pricing-strategy, finance, market-insight, ethics-governance, revenue, people-org, and more, coordinated by the council-orchestrator."
+    }
+  ]
+}
