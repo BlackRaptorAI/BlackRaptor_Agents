@@ -12,9 +12,9 @@ This repository consolidates the former `development-team-agents` and
 `business-council-agents` repositories (both now archived, histories merged
 here) into the single home for the full group.
 
-## Install (Claude Code plugin marketplace)
+## Install
 
-Add this repo as a plugin marketplace, then install either team — or both:
+**Claude Code (CLI / desktop / IDE)** — add this repo as a plugin marketplace, then install either team, or both. Installs at **user scope**, so it's available in **every project** on your machine:
 
 ```bash
 /plugin marketplace add BlackRaptorAI/BlackRaptor_Agents
@@ -23,10 +23,18 @@ Add this repo as a plugin marketplace, then install either team — or both:
 /reload-plugins
 ```
 
-Installed agents and skills are namespaced (e.g. `blackraptor-dev-team:excellence-pass`)
-and available in every project. Prefer to vendor the files into a single repo
-instead? Each team also ships a classic installer — see [`development/`](development/)
-and [`council/`](council/).
+Agents and skills are namespaced (e.g. `blackraptor-dev-team:excellence-pass`).
+
+### Where it works today
+
+| Surface | How to install | Status |
+|---|---|---|
+| **Claude Code** (CLI, desktop, IDE) | the `/plugin marketplace add` command above | ✅ **Available now** — user scope = every project |
+| **Any repo, vendored** | run each team's `install.sh` into your repo (see [`development/`](development/) · [`council/`](council/)) | ✅ Available now |
+| **Claude Cowork** (individual, claude.ai) | via Anthropic's official plugin catalog | ⏳ **Submitted for curation** — Cowork has no self-serve marketplace yet |
+| **Claude Cowork** (organization) | your org admin provisions it centrally (managed plugins/MCP) | ✅ Available to org admins now |
+
+> **Note on Cowork:** Cowork is skills-centric and does not read a local `~/.claude` or support user-added marketplaces. Once curated into Anthropic's catalog, the **skills** (`research-integrity`, `excellence-pass`, gate reviews, …) sync automatically; the full sub-agent roster is primarily a Claude Code capability.
 
 ## The two teams
 
