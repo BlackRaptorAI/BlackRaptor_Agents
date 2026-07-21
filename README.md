@@ -41,6 +41,14 @@ Agents and skills are namespaced (e.g. `blackraptor-dev-team:excellence-pass`).
 
 > **Note on Cowork:** Cowork is skills-centric and does not read a local `~/.claude` or support user-added marketplaces. Once curated into Anthropic's catalog, the **skills** (`research-integrity`, `excellence-pass`, gate reviews, …) sync automatically; the full sub-agent roster is primarily a Claude Code capability.
 
+### Using the skills in Claude Cowork (today)
+
+Until the catalog submission lands, you can add the skills manually: in a Cowork
+session, open **Customize → Skills** and upload the `SKILL.md`. Upload-ready,
+single-file versions (research-integrity has its templates folded in so nothing is
+lost) + the exact steps and raw links are in **[`cowork/`](cowork/)**. Start with
+**research-integrity** and **excellence-pass**.
+
 ## The two teams
 
 | | Team | Answers | Home |
