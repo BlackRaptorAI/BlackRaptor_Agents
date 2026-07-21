@@ -1,5 +1,10 @@
 # BlackRaptor Agents
 
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![Claude Code plugin](https://img.shields.io/badge/Claude_Code-add_marketplace-D97757?logo=anthropic&logoColor=white)](#install)
+[![Agents](https://img.shields.io/badge/agents-24_dev_%2B_12_council-6E56CF)](#the-two-teams)
+[![Skills](https://img.shields.io/badge/skills-8-2EA043)](development/claude/skills)
+
 **A complete, governed AI organization for Claude Code: a 24-agent development
 team and a 12-seat executive advisory council, designed to work as one company
 — agents advise, humans decide.**
