@@ -37,6 +37,8 @@ business-council-agents/
 ├── templates/
 │   ├── definition-brief.md       # The handoff artifact to your dev team
 │   └── business-context.md       # REQUIRED grounding — fill this in first
+├── skills/
+│   └── council/SKILL.md    # The /council skill — "convene the council" runs the whole protocol
 └── docs/
     └── PORTING.md          # Running the Council outside Claude Code
 ```
@@ -50,6 +52,11 @@ business-council-agents/
    conventional wisdom, and the orchestrator refuses to convene without it.
 4. Ask: *"Convene the council on ..."* — the orchestrator selects seats,
    enforces the challenge protocol, and returns a decision-ready view.
+
+> **Installed via the plugin marketplace?** The `council` skill ships with it, so
+> you can just say *"convene the council"* (or `/council`) — it grounds itself in
+> `BUSINESS-CONTEXT.md` and runs steps 3–4 for you. Manual copy (above) still works
+> if you're not using the plugin.
 
 ## Start lean — don't activate all twelve
 
