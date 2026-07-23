@@ -1,7 +1,7 @@
 {
   "name": "blackraptor-dev-team",
   "displayName": "BlackRaptor Agents — Development Team",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "dependencies": ["blackraptor-bridge"],
   "description": "A governed AI development team: a process orchestrator, a principal architect, engineers, and blocking-gate reviewers (security, privacy, compliance, red-team, and the completion-auditor verification gate). Ships shared skills — excellence-pass, gate-verdict-format, enforcement-liveness, change-record, stride-review, owasp-llm-checklist, expand-contract-migration. Auto-pulls the `blackraptor-bridge` plugin, which adds the shared `product-manager` and `evidence-auditor` agents + the `research-integrity` skill.",
   "author": {

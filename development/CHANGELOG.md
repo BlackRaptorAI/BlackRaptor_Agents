@@ -3,6 +3,13 @@
 All notable changes to the BlackRaptor Agents development team are recorded here.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.4.1] — 2026-07-23
+
+### Fixed
+- **`completion-auditor` now pins `model: opus`** — it was missing a `model:` field
+  and silently fell back to the session default. It's a deep-judgment gate; opus is
+  the correct tier (matches golden and the other gate agents).
+
 ## [1.4.0] — 2026-07-22
 
 Cross-cutting agents moved to a shared bridge; roster 25 → 23.
