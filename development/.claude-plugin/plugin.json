@@ -1,7 +1,7 @@
 {
   "name": "blackraptor-dev-team",
   "displayName": "BlackRaptor Agents — Development Team",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A governed AI development team: a process orchestrator, a principal architect, engineers, and blocking-gate reviewers (security, privacy, compliance, red-team, the evidence-auditor research gate, and the completion-auditor verification gate). Ships with shared skills — excellence-pass, research-integrity, gate-verdict-format, enforcement-liveness, change-record, stride-review, owasp-llm-checklist, expand-contract-migration.",
   "author": {
     "name": "BlackRaptor AI",

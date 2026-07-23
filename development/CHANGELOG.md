@@ -3,6 +3,23 @@
 All notable changes to the BlackRaptor Agents development team are recorded here.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.3.0] — 2026-07-22
+
+Public now mirrors the golden roster more closely: personas out, model tiering in.
+
+### Changed
+- **Removed the persona/backstory blocks** ("**Who you are.**" voice paragraphs)
+  from all 24 charters. The charters keep their role, reasoning method, mission,
+  and boundaries — just not the first-person backstory. Behavior is defined by the
+  instructions, not a character.
+- **Model tiering now matches the source deployment** — `dev-orchestrator` and
+  `principal-architect` move `opus → fable` (Fable 5), the top tier, reserved for
+  the two roles where a mistake is costliest and call volume is lowest. Deep-judgment
+  gates stay `opus`; everyday build stays `sonnet`. Each fable charter carries the
+  tier-appropriate Output-quality discipline line (checklist backstop). README
+  "Model tiering" section updated (was "tops out at `opus`"); fall back to `opus`
+  where `fable` isn't available.
+
 ## [1.2.0] — 2026-07-22
 
 ### Added — agents
