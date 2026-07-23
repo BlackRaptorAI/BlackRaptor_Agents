@@ -3,6 +3,17 @@
 All notable changes to the `blackraptor-council` plugin are recorded here.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.2.0] — 2026-07-22
+
+### Changed
+- **`product-strategy` merged into the shared `product-manager`** and moved to the
+  new `blackraptor-bridge` plugin (auto-installed as a dependency). The
+  `council-orchestrator` still convenes it as the product/strategy anchor — every
+  cross-reference in the seats, `COUNCIL.md`, and the Definition Brief now points to
+  `product-manager`. Council seats 12 → 11.
+- `plugin.json` now declares `"dependencies": ["blackraptor-bridge"]`; the bridge
+  also brings the council its `evidence-auditor` gate.
+
 ## [1.1.0] — 2026-07-22
 
 ### Added — skills

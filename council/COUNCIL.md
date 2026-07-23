@@ -87,7 +87,7 @@ dissent and a human signature on consequential calls.
 - **Channels** — designed by `gtm-strategy` (executed by `revenue` when
   staged); co-decided with `pricing-strategy`, `finance` (CAC/payback
   ceilings), and `market-insight` (segment → channel), constrained by
-  `product-strategy`. You cannot pick a channel without the price, or a price
+  `product-manager`. You cannot pick a channel without the price, or a price
   without the channel. Channel-market fit is discovered empirically: the
   Council designs experiments and thresholds; the market decides.
 - **Raise size / timing** (when `fundraising-ir` is staged) — owned by
@@ -100,7 +100,7 @@ unknown, not by org-chart completeness.
 
 | Stage | Seats |
 |---|---|
-| Start (core) | `council-orchestrator`, `product-strategy`, `market-insight`, `pricing-strategy`, `finance`, `ethics-governance` |
+| Start (core) | `council-orchestrator`, `product-manager`, `market-insight`, `pricing-strategy`, `finance`, `ethics-governance` |
 | Market approach | `gtm-strategy` |
 | Channels live with real spend | `revenue`, `growth-engine`, `technology-strategy` (stage earlier if data/tooling decisions loom — growth-engine's integrated-data prerequisite depends on it) |
 | Scale | `people-org`; Channels & Partnerships seat if partner-led |

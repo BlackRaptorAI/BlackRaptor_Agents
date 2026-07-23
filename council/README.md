@@ -21,9 +21,8 @@ it different.
 business-council-agents/
 ├── COUNCIL.md              # The charter — binding rules for every seat
 ├── VISION.md               # Why this exists, strengths, intended use
-├── agents/                 # 12 advisor agent definitions
+├── agents/                 # 11 advisor seats (the product anchor now ships in the shared bridge)
 │   ├── council-orchestrator.md   # Convener + challenge protocol (start here)
-│   ├── product-strategy.md       # What to build, for whom, why it wins
 │   ├── market-insight.md         # Market truth + customer ground truth
 │   ├── pricing-strategy.md       # Packaging, pricing, offer economics
 │   ├── finance.md                # Unit economics, capital, "is it worth it"
@@ -42,6 +41,12 @@ business-council-agents/
 └── docs/
     └── PORTING.md          # Running the Council outside Claude Code
 ```
+
+> **The product anchor + evidence gate ship in the shared bridge.** `product-manager`
+> (the merged product-strategy + delivery role) and `evidence-auditor` (the council's
+> evidence gate) live in the **`blackraptor-bridge`** plugin, which is **auto-installed**
+> alongside this council. The `council-orchestrator` convenes `product-manager` as the
+> product/strategy anchor exactly as before — it just isn't a council-only file.
 
 ## Quickstart (Claude Code / Cowork)
 
@@ -92,7 +97,11 @@ task volume:
 | Tier | Seats | Why |
 |---|---|---|
 | **Opus** | `council-orchestrator`, `finance`, `ethics-governance`, `fundraising-ir` | Highest judgment stakes: the orchestrator synthesizes disagreement (a subtle failure corrupts everything downstream); finance owns capital allocation and downside math; ethics-governance holds legal judgment and BLOCK authority; fundraising-ir analyzes terms where a missed nuance costs equity. |
-| **Sonnet** | `product-strategy`, `market-insight`, `pricing-strategy`, `gtm-strategy`, `revenue`, `growth-engine`, `technology-strategy`, `people-org` | Analysis and strategy seats: strong reasoning over sources and frameworks, invoked frequently, cost-efficient. |
+| **Sonnet** | `market-insight`, `pricing-strategy`, `gtm-strategy`, `revenue`, `growth-engine`, `technology-strategy`, `people-org` | Analysis and strategy seats: strong reasoning over sources and frameworks, invoked frequently, cost-efficient. |
+
+> `product-manager` (the product anchor) and `evidence-auditor` (the evidence gate)
+> run at `sonnet` and `opus` respectively but live in the shared **`blackraptor-bridge`**
+> plugin, auto-installed with this council — so their tiering is documented there.
 
 There is deliberately no cheaper volume tier: every council output is
 advice a CEO may act on, so the quality floor is uniform. Assignments are

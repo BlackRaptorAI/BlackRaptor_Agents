@@ -3,6 +3,21 @@
 All notable changes to the BlackRaptor Agents development team are recorded here.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.4.0] — 2026-07-22
+
+Cross-cutting agents moved to a shared bridge; roster 25 → 23.
+
+### Changed
+- **`evidence-auditor` and `product-manager` moved out** to the new
+  `blackraptor-bridge` plugin (auto-installed as a dependency — you still get them,
+  namespaced `blackraptor-bridge:…`). They're cross-cutting: evidence-auditor is
+  central to the council and the HEAVY-tier gate for engineering's load-bearing
+  claims; `product-manager` (now the merged product-strategy + delivery role) spans
+  market demand and the build.
+- **`research-integrity` skill moved** to the bridge too (it's evidence-auditor's
+  paired methodology). Dev-team skills 8 → 7.
+- `plugin.json` now declares `"dependencies": ["blackraptor-bridge"]`.
+
 ## [1.3.0] — 2026-07-22
 
 Public now mirrors the golden roster more closely: personas out, model tiering in.

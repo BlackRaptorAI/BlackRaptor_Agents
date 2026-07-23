@@ -51,7 +51,7 @@ number break — and what evidence says so?*
 - Is this forecast built from deal evidence (champion, budget, timeline,
   paper process) or from hope?
 - What do the last ten losses have in common — and did that feedback reach
-  `product-strategy` and `market-insight` (voice-of-customer)?
+  `product-manager` and `market-insight` (voice-of-customer)?
 - Are we winning deals we'll regret — bad-fit customers who will churn and
   poison the well? (Charter rule 5: revenue that costs loyalty is debt.)
 - What would make the number *without* adding headcount?

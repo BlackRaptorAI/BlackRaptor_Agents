@@ -2,12 +2,12 @@
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Claude Code plugin](https://img.shields.io/badge/Claude_Code-add_marketplace-D97757?logo=anthropic&logoColor=white)](#install)
-[![Agents](https://img.shields.io/badge/agents-25_dev_%2B_12_council-6E56CF)](#the-two-teams)
+[![Agents](https://img.shields.io/badge/agents-23_dev_%2B_11_council_%2B_2_bridge-6E56CF)](#the-teams)
 [![Skills](https://img.shields.io/badge/skills-9-2EA043)](development/claude/skills)
 
-**A complete, governed AI organization for Claude Code: a 25-agent development
-team and a 12-seat executive advisory council, designed to work as one company
-— agents advise, humans decide.**
+**A complete, governed AI organization for Claude Code: a 23-agent development
+team and an 11-seat executive advisory council, joined by a shared bridge of
+cross-cutting agents — designed to work as one company, agents advise, humans decide.**
 
 Created by [Tom Hanks](https://tomhanks.pro) (BlackRaptor AI) ·
 Battle-tested in production · Apache-2.0 ·
@@ -23,12 +23,15 @@ here) into the single home for the full group.
 
 ```bash
 /plugin marketplace add BlackRaptorAI/BlackRaptor_Agents
-/plugin install blackraptor-dev-team@blackraptor-ai      # the 25-agent dev team + 8 skills
-/plugin install blackraptor-council@blackraptor-ai       # the 12-seat advisory council + the /council skill
+/plugin install blackraptor-dev-team@blackraptor-ai      # the 23-agent dev team + 7 skills
+/plugin install blackraptor-council@blackraptor-ai       # the 11-seat advisory council + the /council skill
 /reload-plugins
 ```
 
-Agents and skills are namespaced (e.g. `blackraptor-dev-team:excellence-pass`).
+Either team **auto-installs the shared `blackraptor-bridge`** plugin — the
+cross-cutting `product-manager` and `evidence-auditor` agents + the
+`research-integrity` skill — so you don't install it directly. Agents and skills
+are namespaced (e.g. `blackraptor-dev-team:excellence-pass`, `blackraptor-bridge:product-manager`).
 
 ### Where it works today
 
@@ -49,16 +52,17 @@ single-file versions (research-integrity has its templates folded in so nothing 
 lost) + the exact steps and raw links are in **[`cowork/`](cowork/)**. Start with
 **research-integrity** and **excellence-pass**.
 
-## The two teams
+## The teams
 
 | | Team | Answers | Home |
 |---|---|---|---|
-| 🛠 | **Development team** — 25 specialist agents: architect, engineers, security, privacy, compliance, QA, ops, docs, and gate reviewers (incl. `evidence-auditor`, the research-integrity gate, and `completion-auditor`, which re-checks claimed-complete work against ground truth). Blocking gates hold the line; every sensitive change gets a signed Change Record. | *"Are we building the thing right?"* | [`development/`](development/) |
-| 🏛 | **Executive Advisory Council** — 12 seats: product strategy, market insight, pricing, finance, GTM, revenue, growth, technology, people, ethics (with standing to block), fundraising — convened by an orchestrator whose **challenge protocol** stops unevidenced claims from ever reaching you. | *"Are we building the right company?"* | [`council/`](council/) |
+| 🛠 | **Development team** — 23 specialist agents: architect, engineers, security, privacy, compliance, QA, ops, docs, and gate reviewers (incl. `completion-auditor`, which re-checks claimed-complete work against ground truth). Blocking gates hold the line; every sensitive change gets a signed Change Record. | *"Are we building the thing right?"* | [`development/`](development/) |
+| 🏛 | **Executive Advisory Council** — 11 seats: market insight, pricing, finance, GTM, revenue, growth, technology, people, ethics (with standing to block), fundraising — convened by an orchestrator whose **challenge protocol** stops unevidenced claims from ever reaching you. | *"Are we building the right company?"* | [`council/`](council/) |
+| 🌉 | **Shared bridge** — the cross-cutting roles that span both teams: `product-manager` (end-to-end product owner, from outcome thesis to buildable definition) and `evidence-auditor` (the adversarial gate over research/analysis), plus the `research-integrity` skill. **Auto-installed** with either team. | *"Does the build match the market, and is the evidence sound?"* | [`bridge/`](bridge/) |
 
 Each directory is self-contained — its own README, install instructions, agent
-files, and governance docs — and can be adopted independently. Together they
-form one operating model:
+files, and governance docs. The two teams can be adopted independently; the
+bridge rides along with either. Together they form one operating model:
 
 ```
                 YOU (the human — decides, signs, owns)

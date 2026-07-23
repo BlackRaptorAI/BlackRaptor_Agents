@@ -7,7 +7,7 @@
 
 **Status:** draft / in challenge / CEO-signed
 **Date:**
-**Prepared by:** council-orchestrator (anchor: product-strategy)
+**Prepared by:** council-orchestrator (anchor: product-manager)
 **Decision reversibility:** one-way door / two-way door
 
 ## 1. Problem & customer need

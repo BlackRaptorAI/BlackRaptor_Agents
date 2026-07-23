@@ -108,7 +108,7 @@ The council executes the decision as made — disagree and commit.
 ## Phase-0 definition work
 
 When the question is "what should we build and why," run the definition
-sequence: `product-strategy` (anchor), `market-insight`, `pricing-strategy`,
+sequence: `product-manager` (anchor), `market-insight`, `pricing-strategy`,
 `finance`, with `ethics-governance` standing. The output is a **Definition
 Brief** (`templates/definition-brief.md`) — the single handoff artifact to the
 development team. You own its completeness; the CEO signs it.

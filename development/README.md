@@ -15,7 +15,7 @@ production and one developer runs the whole show.
 
 It is not just prompts. It's a three-layer operating model:
 
-- **Agents advise** — 23 specialist personas (architect, engineers, security,
+- **Agents advise** — 23 specialist agents (architect, engineers, security,
   privacy, compliance, QA, legal/IP, and more) that draft, build test-first,
   and review, coordinated by a process-only orchestrator.
 - **Humans decide** — every sensitive change gets a signed **Change Record**:
@@ -43,10 +43,16 @@ CHANGELOG.md       what changed, and credit to the ideas we borrowed
 
 ### The roster
 
+> Installing this plugin **auto-installs the shared `blackraptor-bridge`**, which
+> adds two cross-cutting agents the dev team uses — **`product-manager`** (requirement
+> intake → buildable definition) and **`evidence-auditor`** (the HEAVY-tier gate for
+> load-bearing research / perf-scale / vendor-selection claims) — plus the
+> `research-integrity` skill. They install namespaced as `blackraptor-bridge:…`.
+
 | Pod | Agents |
 |---|---|
 | Orchestration & Architecture | `dev-orchestrator` (process-only orchestrator — the one agent that invokes others), `principal-architect` (architecture authority), `security-architect` |
-| Product & Design | `product-manager`, `ux-designer` |
+| Product & Design | `ux-designer` — the `product-manager` role now ships in the shared **bridge** (auto-installed) |
 | Engineering | `backend-engineer`, `frontend-engineer`, `data-engineer`, `ai-ml-engineer`, `edge-agent-engineer` (on-device/customer-premises tier) |
 | Quality & Assurance | `qa-test-engineer`, `code-reviewer`, `red-team-reviewer` (adversarial pre-pentest review) |
 | Compliance | `compliance-officer`, `privacy-counsel`, `domain-compliance` (your regulated domain: HIPAA, SOX, MRV, …) |
@@ -73,7 +79,7 @@ model for high-volume execution.
 |---|---|---|---|
 | Orchestration & Architecture | `fable` | `dev-orchestrator`, `principal-architect` | `dev-orchestrator` routes every change and enforces the challenge discipline — a routing miss silently skips a gate. `principal-architect` shapes every architecture-level decision — the costliest kind to get wrong. Both merit the strongest model available. |
 | Deep judgment (gates & adversarial review) | `opus` | `security-architect`, `privacy-counsel`, `compliance-officer`, `domain-compliance`, `red-team-reviewer`, `security-operations`, `code-reviewer`, `operational-readiness`, `legal-docs-writer`, `ip-counsel` | Blocking gates and adversarial passes: being wrong is expensive and call volume is low, so the premium is worth it. `code-reviewer` sits here deliberately — it is the last gate before a merge-to-prod deploy and runs once per PR, so the premium buys judgment at the single point where everything converges. |
-| Everyday build | `sonnet` | `backend-engineer`, `frontend-engineer`, `data-engineer`, `ai-ml-engineer`, `edge-agent-engineer`, `qa-test-engineer`, `devops-sre`, `ux-designer`, `product-manager`, `product-marketing`, `technical-writer` | High-volume execution from already-approved specs; strong and cost-efficient. |
+| Everyday build | `sonnet` | `backend-engineer`, `frontend-engineer`, `data-engineer`, `ai-ml-engineer`, `edge-agent-engineer`, `qa-test-engineer`, `devops-sre`, `ux-designer`, `product-marketing`, `technical-writer` | High-volume execution from already-approved specs; strong and cost-efficient. |
 
 Two notes:
 

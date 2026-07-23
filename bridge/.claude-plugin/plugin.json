@@ -1,0 +1,15 @@
+{
+  "name": "blackraptor-bridge",
+  "displayName": "BlackRaptor Agents — Shared Bridge",
+  "version": "1.0.0",
+  "description": "Cross-cutting agents shared by the development team and the executive council: `product-manager` (the end-to-end product owner bridging market demand and the build) and `evidence-auditor` (the adversarial gate for research, analysis, and evidence-based reporting), plus the `research-integrity` methodology skill. Auto-installed as a dependency of either team plugin — you don't install it directly.",
+  "skills": "./skills/",
+  "author": {
+    "name": "BlackRaptor AI",
+    "url": "https://github.com/BlackRaptorAI"
+  },
+  "homepage": "https://github.com/BlackRaptorAI/BlackRaptor_Agents/tree/main/bridge",
+  "repository": "https://github.com/BlackRaptorAI/BlackRaptor_Agents",
+  "license": "Apache-2.0",
+  "keywords": ["agents", "product", "research-integrity", "evidence", "shared", "bridge"]
+}
