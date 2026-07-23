@@ -47,12 +47,27 @@ are namespaced (e.g. `blackraptor-dev-team:excellence-pass`, `blackraptor-bridge
 
 | Surface | How to install | Status |
 |---|---|---|
-| **Claude Code** (CLI, desktop, IDE) | the `/plugin marketplace add` command above | ✅ **Available now** — user scope = every project |
+| **Claude Code** (CLI, IDE) | the `/plugin marketplace add` command above | ✅ **Available now** — user scope = every project |
+| **Claude Desktop** (no terminal) | the GUI steps below — no typing required | ✅ Available now |
 | **Any repo, vendored** | run each team's `install.sh` into your repo (see [`development/`](development/) · [`council/`](council/)) | ✅ Available now |
 | **Claude Cowork** (individual, claude.ai) | via Anthropic's official plugin catalog | ⏳ **Submitted for curation** — Cowork has no self-serve marketplace yet |
 | **Claude Cowork** (organization) | your org admin provisions it centrally (managed plugins/MCP) | ✅ Available to org admins now |
 
 > **Note on Cowork:** Cowork is skills-centric and does not read a local `~/.claude` or support user-added marketplaces. Once curated into Anthropic's catalog, the **skills** (`research-integrity`, `excellence-pass`, gate reviews, …) sync automatically; the full sub-agent roster is primarily a Claude Code capability.
+
+### Install in Claude Desktop (GUI, no commands)
+
+There is no one-click install link yet (that arrives with Anthropic's official
+plugin directory, [claude.com/plugins](https://claude.com/plugins), once this
+marketplace is curated). Until then, in the **Claude Desktop** app:
+
+1. Click **+** next to the prompt box → **Plugins**.
+2. **Manage plugins** → **+** → **Add marketplace**.
+3. Choose **GitHub repository** and enter `BlackRaptorAI/BlackRaptor_Agents`.
+4. Back in the plugin browser, install **blackraptor-dev-team**,
+   **blackraptor-council**, and/or **blackraptor-marketing** (the shared
+   **blackraptor-bridge** comes automatically).
+5. Restart the session (or `/reload-plugins`) to load them.
 
 ### Using the skills in Claude Cowork (today)
 
