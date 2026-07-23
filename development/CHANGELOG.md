@@ -3,6 +3,17 @@
 All notable changes to the BlackRaptor Agents development team are recorded here.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.2.0] — 2026-07-22
+
+### Added — agents
+- **`completion-auditor`** — an independent verifier that audits claimed-complete
+  work **before** it's reported as done (especially multi-step git/PR/merge/deploy
+  work). Read/verify-only (Bash, Read, Grep, Glob); it doesn't trust narration —
+  it re-checks ground truth (remote refs, CI state, `origin/main` log, cwd/worktree
+  hygiene, pipe-masked exit codes, shell word-splitting, governance ordering) and
+  returns PASS or a list of unverified/failed items to fix first. The behavioral
+  analog of the Excellence Pass "verify by an independent method." Roster 24 → 25.
+
 ## [1.1.0] — 2026-07-21
 
 The research-integrity release + Claude Code plugin marketplace. Roster 23 → 24.

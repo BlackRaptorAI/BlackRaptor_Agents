@@ -2,10 +2,10 @@
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Claude Code plugin](https://img.shields.io/badge/Claude_Code-add_marketplace-D97757?logo=anthropic&logoColor=white)](#install)
-[![Agents](https://img.shields.io/badge/agents-24_dev_%2B_12_council-6E56CF)](#the-two-teams)
+[![Agents](https://img.shields.io/badge/agents-25_dev_%2B_12_council-6E56CF)](#the-two-teams)
 [![Skills](https://img.shields.io/badge/skills-9-2EA043)](development/claude/skills)
 
-**A complete, governed AI organization for Claude Code: a 24-agent development
+**A complete, governed AI organization for Claude Code: a 25-agent development
 team and a 12-seat executive advisory council, designed to work as one company
 — agents advise, humans decide.**
 
@@ -23,7 +23,7 @@ here) into the single home for the full group.
 
 ```bash
 /plugin marketplace add BlackRaptorAI/BlackRaptor_Agents
-/plugin install blackraptor-dev-team@blackraptor-ai      # the 24-agent dev team + 8 skills
+/plugin install blackraptor-dev-team@blackraptor-ai      # the 25-agent dev team + 8 skills
 /plugin install blackraptor-council@blackraptor-ai       # the 12-seat advisory council + the /council skill
 /reload-plugins
 ```
@@ -53,7 +53,7 @@ lost) + the exact steps and raw links are in **[`cowork/`](cowork/)**. Start wit
 
 | | Team | Answers | Home |
 |---|---|---|---|
-| 🛠 | **Development team** — 24 specialist agents: architect, engineers, security, privacy, compliance, QA, ops, docs, and gate reviewers (incl. `evidence-auditor`, the research-integrity gate). Blocking gates hold the line; every sensitive change gets a signed Change Record. | *"Are we building the thing right?"* | [`development/`](development/) |
+| 🛠 | **Development team** — 25 specialist agents: architect, engineers, security, privacy, compliance, QA, ops, docs, and gate reviewers (incl. `evidence-auditor`, the research-integrity gate, and `completion-auditor`, which re-checks claimed-complete work against ground truth). Blocking gates hold the line; every sensitive change gets a signed Change Record. | *"Are we building the thing right?"* | [`development/`](development/) |
 | 🏛 | **Executive Advisory Council** — 12 seats: product strategy, market insight, pricing, finance, GTM, revenue, growth, technology, people, ethics (with standing to block), fundraising — convened by an orchestrator whose **challenge protocol** stops unevidenced claims from ever reaching you. | *"Are we building the right company?"* | [`council/`](council/) |
 
 Each directory is self-contained — its own README, install instructions, agent
