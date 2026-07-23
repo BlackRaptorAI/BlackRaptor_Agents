@@ -4,8 +4,8 @@
     "name": "BlackRaptor AI",
     "url": "https://github.com/BlackRaptorAI"
   },
-  "description": "Governed AI agent teams for Claude Code — a full development team and an executive advisory council, plus a shared bridge of cross-cutting agents (product-manager, evidence-auditor) and skills (Excellence Pass, research-integrity, gate reviews). Install either team; the bridge comes with it.",
-  "version": "1.2.0",
+  "description": "Governed AI agent teams for Claude Code — a full development team and an executive advisory council, plus a shared bridge of cross-cutting agents (product-manager, evidence-auditor) and skills (Excellence Pass, research-integrity, gate reviews). Install either team; the bridge comes with it, and now the full-stack marketing team (hosted in BlackRaptorAI/BlackRaptor_Agents_Marketing, served through this marketplace).",
+  "version": "1.3.0",
   "plugins": [
     {
       "name": "blackraptor-dev-team",
@@ -24,6 +24,16 @@
       "displayName": "BlackRaptor Agents — Shared Bridge",
       "source": "./bridge",
       "description": "Cross-cutting agents shared by both teams: product-manager (end-to-end product owner bridging market demand and the build) and evidence-auditor (adversarial gate for research/analysis/evidence), plus the research-integrity skill. Auto-installed as a dependency of either team plugin — not installed directly."
+    },
+    {
+      "name": "blackraptor-marketing",
+      "displayName": "BlackRaptor Agents — Marketing Team",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/BlackRaptorAI/BlackRaptor_Agents_Marketing.git",
+        "path": "marketing"
+      },
+      "description": "A governed, full-stack marketing department: 15 world-class specialist agents (brand, naming/trademark, market research, content, copy, creative, SEO/GEO, paid media, social/community, email/outbound, video, competitive intel, pricing, analytics, and a campaign coordinator) + 9 skills including the compliance-claims-gate every external asset passes through. Auto-installs blackraptor-bridge (evidence-auditor + research-integrity + product-manager). No autonomous sends, posts, or spend — agents draft, humans approve. Hosted in BlackRaptorAI/BlackRaptor_Agents_Marketing."
     }
   ]
 }
