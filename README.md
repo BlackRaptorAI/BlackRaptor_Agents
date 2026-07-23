@@ -33,6 +33,16 @@ cross-cutting `product-manager` and `evidence-auditor` agents + the
 `research-integrity` skill — so you don't install it directly. Agents and skills
 are namespaced (e.g. `blackraptor-dev-team:excellence-pass`, `blackraptor-bridge:product-manager`).
 
+> **Already had a team installed from before the bridge existed?** A `/plugin update`
+> does **not** pull a newly-added dependency — only a fresh install does. So if you
+> updated `blackraptor-dev-team` (≥ 1.4.0) or `blackraptor-council` (≥ 1.2.0) rather
+> than installing them fresh, add the bridge once:
+> ```bash
+> /plugin install blackraptor-bridge@blackraptor-ai
+> /reload-plugins
+> ```
+> Fresh installs (the commands above) pull it automatically — no extra step.
+
 ### Where it works today
 
 | Surface | How to install | Status |
