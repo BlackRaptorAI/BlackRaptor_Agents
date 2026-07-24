@@ -108,7 +108,7 @@ attached. No agent approves its own work; no claim reaches you unchallenged.
 ## Getting started
 
 - Development team: [`development/README.md`](development/README.md) — quickstart, roster, tiered change governance, install script.
-- Council: [`council/README.md`](council/README.md) — seat charters, the challenge protocol, Definition Brief templates, plugin package under [`council/dist/`](council/dist/).
+- Council: [`council/README.md`](council/README.md) — seat charters, the challenge protocol, Definition Brief templates. (Install via the marketplace — the old `dist/` zip package is retired.)
 
 ## Provenance & roadmap
 
